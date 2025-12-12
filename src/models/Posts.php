@@ -25,7 +25,7 @@ class Posts {
     public function find($id) {
         $query = "SELECT * FROM posts
                 left join users on posts.utilisateur_id = users.id
-                WHERE id = :id";
+                WHERE posts.id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindValue(":id", $id);
         $stmt->execute();

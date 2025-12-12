@@ -70,7 +70,8 @@ switch ($controller) {
                 break;
 
             case 'supprimer' :
-                
+                $postsController->supprimer();
+                break;
 
             default:
                 $_SESSION['message'] = ['danger' => 'Page non trouvée'];
