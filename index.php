@@ -73,6 +73,10 @@ switch ($controller) {
                 $postsController->supprimer();
                 break;
 
+            case 'modifier' :
+                require_once(__DIR__.'/src/views/Posts/modifier.php');
+                break;
+
             default:
                 $_SESSION['message'] = ['danger' => 'Page non trouvée'];
                 header('Location: ?c=home');

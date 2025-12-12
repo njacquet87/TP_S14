@@ -29,6 +29,22 @@ class postsController {
         }
     }
 
+    public function modifier() {
+        $id = $_GET['id'];
+
+        $titre = $_POST['titre'];
+        $contenu = $_POST['contenu'];
+        $utilisateur_id = $_SESSION['id'];
+
+        $ok = $this->postsModel->update($id, $titre, $contenu, $utilisateur_id);
+
+        if ($ok) {
+            require_once(__DIR__ . '/../Views/Posts/enregistrer.php');
+        } else {
+            echo "Erreur lors de la modification du post.";
+        }
+    }
+
     public function lister() {
         $posts = $this->postsModel->findAll();
 
