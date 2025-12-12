@@ -69,6 +69,9 @@ switch ($controller) {
                 $postsController->lister();
                 break;
 
+            case 'supprimer' :
+                
+
             default:
                 $_SESSION['message'] = ['danger' => 'Page non trouvée'];
                 header('Location: ?c=home');

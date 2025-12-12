@@ -1,13 +1,16 @@
 <h1>Messages</h1>
 
 <div">
-    <?php foreach ($posts as $post) : ?>
+    <?php foreach ($posts as $post) : echo var_dump($post) ?>
         
-        <div class="card" style="margin: 10px;">
+        <div class="card" style="margin: 10px; padding : 10px;">
             <h3 class="card-title">Titre : <?php echo $post['titre'];?></h3>
             <p class="card-text">Contenu : <?php echo $post['contenu'];?></p>
             <p>Auteur : <?php echo $post['nom']; ?></p>
             <p>Date : <?php echo $post['date_publication'] ?></p>
+
+            <a class="btn btn-primary" style="width: 100px;" href="?c=Posts&a=modifier">Modifier</a>
+            <a class="btn btn-danger" style="width: 100px;" href="?c=Posts&a=supprimer&id=<?php echo $post['id'] ?>">Supprimer</a>
         </div> 
     <?php endforeach; ?>
 </div>

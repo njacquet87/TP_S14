@@ -35,4 +35,9 @@ class postsController {
         require_once(__DIR__.'/../views/Posts/lister.php');
     }
 
+    public function supprimer() {
+        $id = $_GET['id'];
+        
+    }
+
 }

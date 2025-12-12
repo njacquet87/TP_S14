@@ -13,7 +13,7 @@ class Posts {
 
     public function findAll() {
         //select trié par date du plus recent au moins recent
-        $query = "SELECT posts.*, users.nom FROM posts
+        $query = "SELECT posts.*, users.nom, users.id FROM posts
                 left join users on posts.utilisateur_id = users.id
                 order by date_publication DESC";
         $stmt = $this->conn->prepare($query);
