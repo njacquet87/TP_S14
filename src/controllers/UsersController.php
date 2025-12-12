@@ -20,9 +20,9 @@ class userController {
         $password = password_hash($password, PASSWORD_DEFAULT);
         $email = $_POST['email'];
 
-        $ajoutOk = $this->userModel->add($nom, $email, $password);
+        $id = $this->userModel->add($nom, $email, $password);
 
-        if ($ajoutOk) {
+        if ($id !== false && $id !== null) {
             require_once(__DIR__.'/../views/Users/enregistrer.php');
         } else {
             echo 'Erreur lors de l\'enregistrement de l\'utilisateur.';

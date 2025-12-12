@@ -49,6 +49,8 @@ switch ($controller) {
 
         }
 
+        break;
+
     case 'Posts' :
 
         $postsController = new postsController();
@@ -73,6 +75,8 @@ switch ($controller) {
                 break;
 
         }
+        
+        break;
 }
 
 ?>

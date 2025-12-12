@@ -3,7 +3,7 @@
 <div>
     <?php foreach ($posts as $post) : ?>
         <div class="card">
-            <p>Titre : <?php echo $post['titre'];?></p>
+            <p class="card-title">Titre : <?php echo $post['titre'];?></p>
             <p>Contenu : <?php echo $post['contenu'];?></p>
         </div> 
     <?php endforeach; ?>
