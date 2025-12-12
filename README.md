@@ -35,3 +35,5 @@ Une table comments qui prend un contenu texte, l'utilisateur qui l'a écrit, le 
 
 
 On peut donc s'inscrire avec un mot de passe contenu en mode hashé dans une base de données. On peut sur le site créer des posts et commenter ceux que l'on choisit.
+
+Erreur qui s'affiche lorsque l'on supprime, "Internal Server error". Pour autant, la suppression s'effectue bien, ce qui viens peut-être d'un problème de redirection, mais nous avons décidé de le mettre de côté car nous ne trouvions pas de solution sur le moment.
