@@ -38,13 +38,14 @@ class postsController {
     public function supprimer() {
         $id = $_GET['id'];
 
-        $posts = $this->postsModel->find($id);
+        $post = $this->postsModel->find($id);
 
-        if (count($posts) > 0) {
+        if ($post) {
             $this->postsModel->delete($id);
         }
 
-        header("Location : ?c=home");
+        header("Location : ?c=Posts&a=lister");
+        exit();
     }
 
 }

@@ -1,7 +1,12 @@
 <h1>Messages</h1>
 
 <div">
-    <?php foreach ($posts as $post) : echo var_dump($post) ?>
+
+    <?php if (count($posts) == 0) { ?>
+        <h3>Aucun message à été posté</h3>
+    <?php } ?>
+
+    <?php foreach ($posts as $post) : ?>
         
         <div class="card" style="margin: 10px; padding : 10px;">
             <h3 class="card-title">Titre : <?php echo $post['titre'];?></h3>
