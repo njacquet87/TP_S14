@@ -12,7 +12,7 @@ create table posts (
     titre varchar(100) not null,
     contenu TEXT not null,
     utilisateur_id int,
-    date_inscription DATETIME default CURRENT_TIMESTAMP,
+    date_publication DATETIME default CURRENT_TIMESTAMP,
 
     Foreign Key (utilisateur_id) REFERENCES users(id)
 )
@@ -22,7 +22,7 @@ create table comments (
     contenu text not null,
     utilisateur_id int,
     post_id int,
-    date_inscription DATETIME default CURRENT_TIMESTAMP, 
+    date_commentaire DATETIME default CURRENT_TIMESTAMP, 
     
     Foreign Key (utilisateur_id) REFERENCES users(id),
     Foreign Key (post_id) REFERENCES posts(id)  

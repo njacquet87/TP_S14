@@ -38,7 +38,7 @@ class userController {
         $nom = $_POST['nom'];
         $password = $_POST['password'];
 
-        $user = $this->userModel->findBy(['nom' => $nom])[0] ?? null;
+        $user = $this->userModel->findBy(['nom' => $nom])[0];
 
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['id'] = $user['id'];

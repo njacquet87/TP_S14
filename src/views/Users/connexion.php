@@ -1,6 +1,6 @@
 <h1>Connexion</h1>
 
-<form action="?c=User&a=verifieConnexion" method="post">
+<form action="?c=User&a=connecter" method="post">
 
     <div class="mb-3">
         <label for="nom" class="form-label">Nom</label>

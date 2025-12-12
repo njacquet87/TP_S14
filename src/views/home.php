@@ -3,3 +3,8 @@
 <?php } else {?>
     <h1>Bienvenue</h1>
 <?php } ?>
+
+
+<div>
+    <a class="nav-link" href='?c=Posts&a=ajouter'>Ajouter un message</a>
+</div>
