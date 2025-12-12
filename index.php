@@ -73,8 +73,12 @@ switch ($controller) {
                 $postsController->supprimer();
                 break;
 
-            case 'modifier' :
-                require_once(__DIR__.'/src/views/Posts/modifier.php');
+            case 'afficherModifier' :
+                $postsController->afficherModifier();
+                break;
+
+            case 'modifier' : 
+                $postsController->modifier();
                 break;
 
             default:
@@ -84,7 +88,6 @@ switch ($controller) {
 
         }
         
-        break;
 }
 
 ?>

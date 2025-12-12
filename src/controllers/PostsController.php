@@ -29,6 +29,17 @@ class postsController {
         }
     }
 
+    public function afficherModifier() {
+        $id = $_GET['id'];
+        $post = $this->postsModel->find($id);
+
+        if ($post) {
+            require_once(__DIR__.'/../views/Posts/modifier.php');
+        } else {
+            echo "Post introuvable.";
+        }
+    }
+
     public function modifier() {
         $id = $_GET['id'];
 
