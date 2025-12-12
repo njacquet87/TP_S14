@@ -1,6 +1,6 @@
 
 CREATE table users (
-    id serial primary key,
+    id int AUTO_INCREMENT primary key,
     nom varchar(100) not null,
     email varchar(100) not null UNIQUE,
     password varchar(100) not null,
@@ -8,7 +8,7 @@ CREATE table users (
 )
 
 create table posts (
-    id int primary key,
+    id int AUTO_INCREMENT primary key,
     titre varchar(100) not null,
     contenu TEXT not null,
     utilisateur_id int,
@@ -18,7 +18,7 @@ create table posts (
 )
 
 create table comments (
-    id int primary key,
+    id int AUTO_INCREMENT primary key,
     contenu text not null,
     utilisateur_id int,
     post_id int,
@@ -35,4 +35,3 @@ select * from comments
 select * from posts
 
 
-delete from posts

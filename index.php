@@ -63,6 +63,10 @@ switch ($controller) {
                 $postsController->enregistrer();
                 break;
 
+            case 'lister' :
+                $postsController->lister();
+                break;
+
             default:
                 $_SESSION['message'] = ['danger' => 'Page non trouvée'];
                 header('Location: ?c=home');
