@@ -12,17 +12,24 @@ class Posts {
     }
 
     public function findAll() {
-        $query = "SELECT * FROM posts";
+        //select trié par date du plus recent au moins recent
+        $query = "SELECT * FROM posts
+                left join users on posts.utilisateur_id = users.id
+                order by date_publication DESC";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
+
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function find($id) {
-        $query = "SELECT * FROM posts WHERE id = :id";
+        $query = "SELECT * FROM posts
+                left join users on posts.utilisateur_id = users.id
+                WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindValue(":id", $id);
         $stmt->execute();
+        
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
