@@ -10,12 +10,12 @@
             <label for="contenu" class="form-label">Contenu du message</label>
             <textarea class="form-control" name="contenu" id="contenu" rows="3" required></textarea>
         </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary" id="enregistrer">Enregistrer</button>
+        </div>
     </form>
 
-    <div class="mb-3">
-        <button type="submit" class="btn btn-primary" id="enregistrer">Enregistrer</button>
-    </div>
-    
 <?php } else { ?>
     <h1>connectez-vous pour ajouter des messages</h1>
 <?php } ?>

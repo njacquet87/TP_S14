@@ -33,3 +33,6 @@ select * from users
 select * from comments
 
 select * from posts
+
+
+delete from posts

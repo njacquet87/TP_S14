@@ -2,7 +2,7 @@
 
 require_once(__DIR__."/Database.php");
 
-class Post {
+class Posts {
 
     private $conn;
 
