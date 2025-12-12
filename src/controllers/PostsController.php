@@ -1,6 +1,7 @@
 <?php
 
-require_once(__DIR__."/../models/Posts.php");
+namespace App\Controllers;
+use App\Models\Posts;
 
 class postsController {
 
@@ -31,9 +32,8 @@ class postsController {
 
     public function afficherModifier() {
         $id = $_GET['id'];
-        $post = $this->postsModel->find($id);
 
-        if ($post) {
+        if ($id) {
             require_once(__DIR__.'/../views/Posts/modifier.php');
         } else {
             echo "Post introuvable.";

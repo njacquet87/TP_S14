@@ -1,6 +1,7 @@
 <?php
 
-require_once(__DIR__."/../models/Users.php");
+namespace App\Controllers;
+use App\Models\User;
 
 class userController {
 

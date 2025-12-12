@@ -4,8 +4,8 @@
 session_start();
 
 require_once(__DIR__."/src/views/header.php");
-require_once(__DIR__."/src/controllers/UsersController.php");
-require_once(__DIR__."/src/controllers/PostsController.php");
+use App\Controllers\postsController;
+use App\Controllers\userController;
 
 $controller = isset($_GET['c']) ? $_GET['c'] : 'home';
 $action = isset($_GET['a']) ? $_GET['a'] : 'lister';

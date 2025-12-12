@@ -1,6 +1,6 @@
 <h1>Modification</h1>
 
-<form action="?c=Posts&a=modifier&id=<?php echo $posts['id'] ?>" method="post" enctype="multipart/form-data">
+<form action="?c=Posts&a=modifier&id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 
     <div class="mb-3">
         <label for="titre" class="form-label">Titre du message</label>

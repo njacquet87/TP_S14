@@ -1,0 +1,10 @@
+{
+    "name": "app/tp_note",
+    "autoload": {
+        "psr-4": {
+            "App\\Controllers\\": "src/Controllers/",
+            "App\\Models\\": "src/Models/"
+        }
+    },
+    "require": {}
+}
