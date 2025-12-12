@@ -13,7 +13,7 @@ class Posts {
 
     public function findAll() {
         //select trié par date du plus recent au moins recent
-        $query = "SELECT * FROM posts
+        $query = "SELECT posts.*, users.nom FROM posts
                 left join users on posts.utilisateur_id = users.id
                 order by date_publication DESC";
         $stmt = $this->conn->prepare($query);
@@ -29,7 +29,7 @@ class Posts {
         $stmt = $this->conn->prepare($query);
         $stmt->bindValue(":id", $id);
         $stmt->execute();
-        
+
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
